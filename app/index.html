@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="dist/css/app.min.css" />
+    <title>GlobalPost</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__top flex flex_between flex_middle">
+          <a href="/" class="header__logo">
+            <img src="dist/img/logo.svg" alt="" />
+          </a>
+          <nav class="header__nav">
+            <ul class="nav__menu flex flex_between flex_middle flex_wrap">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <span class="nav__link__text">Про нас</span>
+                  <i class="_icon _icon-arrow-right"></i>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <span class="nav__link__text">Доставка</span>
+                  <i class="_icon _icon-arrow-right"></i>
+                </a>
+              </li>
+              <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="header__lng">
+            <span class="header__lng__text">Укр</span>
+            <span class="header__lng__arrow arrow arrow_down">
+              <svg
+                width="6"
+                height="10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.586 4.726L.961.113a.388.388 0 00-.547.549L4.764 5 .414 9.338a.388.388 0 10.547.549l4.625-4.613a.387.387 0 000-.548z"
+                  fill="#3E3B3B"
+                />
+              </svg>
+            </span>
+          </a>
+          <div class="header__icons">
+            <a role="button" class="_icon _icon-search"></a>
+            <a role="button" class="_icon _icon-user"></a>
+          </div>
+          <div class="header__btn">
+            <a href="#" class="btn btn_white">Відстежити посилку</a>
+          </div>
+          <div class="header__contacts">
+            <ul>
+              <li><a href="tel:+(044) 501-15-61">(044) 501-15-61</a></li>
+              <li><a href="tel:+(050) 477-05-05">(050) 477-05-05</a></li>
+              <li><a href="tel:+(067) 622-10-23">(067) 622-10-23</a></li>
+            </ul>
+          </div>
+          <a href="#" class="header__cart _icon _icon-cart"></a>
+        </div>
+        <div class="header__intro">
+          <div
+            class="header__info container container_small flex flex_between flex_middle"
+          >
+            <div class="header__img">
+              <img src="dist/img/header_img.png" alt="" />
+            </div>
+            <div class="header__title">
+              <h1>Експрес доставка листів і посилок</h1>
+            </div>
+          </div>
+          <div class="header__calc">
+            <ul class="tab">
+              <li class="tab__item">
+                <a href="#" class="tab__link tab__link_active"
+                  >Міжнародна доставка</a
+                >
+              </li>
+              <li class="tab__item">
+                <a href="#" class="tab__link">Доставка по Україні</a>
+              </li>
+            </ul>
+            <ul class="tab__content">
+              <li>
+                <form class="form-calc flex flex_middle">
+                  <div class="form-calc__col flex flex_column flex_auto">
+                    <div class="form-calc__label">Звідки</div>
+                    <div id="form-calc-from" class="select">
+                      <div class="select__title flex flex_between flex_middle">
+                        <span class="select__value" data-value
+                          >Виберіть країну</span
+                        >
+                        <span
+                          class="select__arrow _icon _icon-drop-down"
+                        ></span>
+                      </div>
+                      <div class="select__options">
+                        <span class="select__option">Україна</span>
+                        <span class="select__option">Россия</span>
+                        <span class="select__option">German</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-calc__col flex flex_column flex_auto">
+                    <div class="form-calc__label">Куди</div>
+                    <div id="form-calc-to" class="select">
+                      <div class="select__title flex flex_between flex_middle">
+                        <span class="select__value" data-value
+                          >Виберіть країну</span
+                        >
+                        <span
+                          class="select__arrow _icon _icon-drop-down"
+                        ></span>
+                      </div>
+                      <div class="select__options">
+                        <span class="select__option">Україна</span>
+                        <span class="select__option">Россия</span>
+                        <span class="select__option">German</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-calc__col flex flex_column flex_auto">
+                    <div class="form-calc__label">Тип відправлення</div>
+                    <div id="form-calc-type" class="select select_full-width">
+                      <div class="select__title flex flex_between flex_middle">
+                        <span class="select__value" data-value
+                          >Виберіть тип відправлення</span
+                        >
+                        <span
+                          class="select__arrow _icon _icon-drop-down"
+                        ></span>
+                      </div>
+                      <div class="select__options options">
+                        <span class="select__option option">
+                          <span class="option__image">
+                            <img src="dist/img/envelope-1.svg" alt="" />
+                          </span>
+                          <span class="option__info flex flex_column">
+                            <span class="option__title">Конверт</span>
+                            <span class="option__subtitle">0.3 кг</span>
+                          </span>
+                        </span>
+                        <span class="select__option option">
+                          <span class="option__image">
+                            <img src="dist/img/envelope-2.svg" alt="" />
+                          </span>
+                          <span class="option__info flex flex_column">
+                            <span class="option__title">Конверт</span>
+                            <span class="option__subtitle">0.5 кг</span>
+                          </span>
+                        </span>
+                        <span class="select__option option">
+                          <span class="option__image">
+                            <img src="dist/img/parcel.svg" alt="" />
+                          </span>
+                          <span class="option__info flex flex_column">
+                            <span class="option__title">Посилка</span>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section clients">
+      <div class="container">
+        <h2 class="section__title">
+          Нам <span class="text_yellow">довіряють</span>
+        </h2>
+        <ul class="clients__list">
+          <li class="clients__item client-card">
+            <img src="dist/img/client-1.png" alt="" />
+          </li>
+          <li class="clients__item client-card">
+            <img src="dist/img/client-2.png" alt="" />
+          </li>
+          <li class="clients__item client-card">
+            <img src="dist/img/client-3.png" alt="" />
+          </li>
+          <li class="clients__item client-card">
+            <img src="dist/img/client-4.png" alt="" />
+          </li>
+          <li class="clients__item client-card">
+            <img src="dist/img/client-5.png" alt="" />
+          </li>
+          <li class="clients__item client-card">
+            <img src="dist/img/client-6.png" alt="" />
+          </li>
+          <li class="clients__item client-card">
+            <img src="dist/img/client-7.png" alt="" />
+          </li>
+          <li class="clients__item client-card">
+            <img src="dist/img/client-8.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section partners">
+      <div class="container">
+        <h2 class="section__title">
+          <span class="text_yellow">GlobalPost</span> - офіційний представник
+          компаній:
+        </h2>
+        <ul class="partners__list">
+          <li class="partners__item partner-card">
+            <img src="dist/img/partner-1.png" alt="" />
+          </li>
+          <li class="partners__item partner-card">
+            <img src="dist/img/partner-2.png" alt="" />
+          </li>
+          <li class="partners__item partner-card">
+            <img src="dist/img/partner-3.png" alt="" />
+          </li>
+          <li class="partners__item partner-card">
+            <img src="dist/img/partner-4.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section services">
+      <div class="container">
+        <h2 class="section__title">
+          Послуги, якими <span class="text_yellow">ви можете</span> скористатися
+        </h2>
+        <ul id="" class="services__list flex flex_center flex_wrap slider__nav">
+          <li class="services__item service active" data-slide-item="0">
+            Кур’єрські послуги
+          </li>
+          <li class="services__item service" data-slide-item="1">
+            Експрес-доставка
+          </li>
+          <li class="services__item service" data-slide-item="2">
+            Автоперевезення
+          </li>
+          <li class="services__item service" data-slide-item="3">
+            Морські перевезення
+          </li>
+          <li class="services__item service" data-slide-item="4">
+            Авіаперевезення
+          </li>
+        </ul>
+        <div class="slider__wrapper">
+          <ul class="slider">
+            <li class="slider__item active">
+              <div class="service__content flex flex_between">
+                <div class="service__info">
+                  <p>
+                    Доставка кур’єром в інші міста приємно здивує вартістю, що
+                    вигідно відрізняє GlobalPost від інших служб доставки.
+                  </p>
+                  <p>
+                    Швидше за все доставляються посилки в обласні центри.
+                    Важлива перевага доставки від GlobalPost є можливість
+                    доставити вантаж в будь-який куточок країни протягом 5 діб
+                    або менше
+                  </p>
+                  <a href="#modal-courier" class="btn btn_yellow service__btn"
+                    >Викликати кур’єра</a
+                  >
+                </div>
+                <div class="service__img">
+                  <img src="dist/img/service-1.png" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="slider__item">
+              <div class="service__content flex flex_between">
+                <div class="service__info">
+                  <p>
+                    Доставка кур’єром в інші міста приємно здивує вартістю, що
+                    вигідно відрізняє GlobalPost від інших служб доставки.
+                  </p>
+                  <p>
+                    Швидше за все доставляються посилки в обласні центри.
+                    Важлива перевага доставки від GlobalPost є можливість
+                    доставити вантаж в будь-який куточок країни протягом 5 діб
+                    або менше
+                  </p>
+                  <a href="#" class="btn btn_yellow service__btn"
+                    >Викликати кур’єра</a
+                  >
+                </div>
+                <div class="service__img">
+                  <img src="dist/img/service-1.png" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="slider__item">
+              <div class="service__content flex flex_between">
+                <div class="service__info">
+                  <p>
+                    Доставка кур’єром в інші міста приємно здивує вартістю, що
+                    вигідно відрізняє GlobalPost від інших служб доставки.
+                  </p>
+                  <p>
+                    Швидше за все доставляються посилки в обласні центри.
+                    Важлива перевага доставки від GlobalPost є можливість
+                    доставити вантаж в будь-який куточок країни протягом 5 діб
+                    або менше
+                  </p>
+                  <a href="#" class="btn btn_yellow service__btn"
+                    >Викликати кур’єра</a
+                  >
+                </div>
+                <div class="service__img">
+                  <img src="dist/img/service-1.png" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="slider__item">
+              <div class="service__content flex flex_between">
+                <div class="service__info">
+                  <p>
+                    Доставка кур’єром в інші міста приємно здивує вартістю, що
+                    вигідно відрізняє GlobalPost від інших служб доставки.
+                  </p>
+                  <p>
+                    Швидше за все доставляються посилки в обласні центри.
+                    Важлива перевага доставки від GlobalPost є можливість
+                    доставити вантаж в будь-який куточок країни протягом 5 діб
+                    або менше
+                  </p>
+                  <a href="#" class="btn btn_yellow service__btn"
+                    >Викликати кур’єра</a
+                  >
+                </div>
+                <div class="service__img">
+                  <img src="dist/img/service-1.png" alt="" />
+                </div>
+              </div>
+            </li>
+            <li class="slider__item">
+              <div class="service__content flex flex_between">
+                <div class="service__info">
+                  <p>
+                    Доставка кур’єром в інші міста приємно здивує вартістю, що
+                    вигідно відрізняє GlobalPost від інших служб доставки.
+                  </p>
+                  <p>
+                    Швидше за все доставляються посилки в обласні центри.
+                    Важлива перевага доставки від GlobalPost є можливість
+                    доставити вантаж в будь-який куточок країни протягом 5 діб
+                    або менше
+                  </p>
+                  <a href="#" class="btn btn_yellow service__btn"
+                    >Викликати кур’єра</a
+                  >
+                </div>
+                <div class="service__img">
+                  <img src="dist/img/service-1.png" alt="" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section profits">
+      <div class="container">
+        <h2 class="section__title">
+          Чому наша доставка <span class="text_yellow">вигідна для вас?</span>
+        </h2>
+        <ul class="profit__list flex flex_between flex_stretch">
+          <li class="profit__item profit-card">
+            <div class="profit-card__img">
+              <img src="dist/img/profit-1.png" alt="" />
+            </div>
+            <div class="profit-card__title">Персональний менеджер-логіст</div>
+            <div class="profit-card__text">
+              Вашою послугою займеться компетентний менеджер, який завжди буде
+              на зв'язку
+            </div>
+          </li>
+          <li class="profit__item profit-card">
+            <div class="profit-card__img">
+              <img src="dist/img/profit-2.png" alt="" />
+            </div>
+            <div class="profit-card__title">Розробка логістичних схем</div>
+            <div class="profit-card__text">
+              При здійсненні перевезень вантажів ми підбираємо логістичну схему
+              доставки вантажу під кожного клієнта
+            </div>
+          </li>
+          <li class="profit__item profit-card">
+            <div class="profit-card__img">
+              <img src="dist/img/profit-3.png" alt="" />
+            </div>
+            <div class="profit-card__title">
+              Перевезення вантажів "Під Ключ"
+            </div>
+            <div class="profit-card__text">
+              Наші фахівці контролюють весь процес доставки вашого вантажу
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section deadlines">
+      <div class="container">
+        <div class="deadlines__wrapper flex flex_between flex_middle">
+          <div class="deadlines__info">
+            <h2 class="deadlines__title">
+              Ми можемо і вміємо
+              <span class="text_yellow">доставляти швидко</span>
+            </h2>
+            <ul>
+              <li>у той самий день</li>
+              <li>на наступний день на ранок</li>
+            </ul>
+          </div>
+          <div class="deadlines__img">
+            <img src="dist/img/deadline.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section steps">
+      <div class="container">
+        <h2 class="section__title">
+          Ви <span class="text_yellow">юридична особа</span> і шукаєте надійну
+          кур’єрську службу?
+        </h2>
+        <p class="section__subtitle">
+          Як почати співпрацю з нами? 3 простих кроки:
+        </p>
+        <ul class="steps__list flex flex-between">
+          <li class="steps__item step-card">
+            <div class="step-card__title">Крок 1</div>
+            <div class="step-card__subtitle">Вартість</div>
+            <div class="step-card__text">
+              Тарифи можна переглянути тут, або надіслати нам запит на пошту
+              1@globalpost.ua, або телефоном, вайбером, телеграм
+            </div>
+          </li>
+          <li class="steps__item">
+            <div class="step-card__title">Крок 2</div>
+            <div class="step-card__subtitle">Підписуєте договір</div>
+            <div class="step-card__text">Скануєте, відправляєте нам</div>
+          </li>
+          <li class="steps__item">
+            <div class="step-card__title">Крок 3</div>
+            <div class="step-card__subtitle">Викликаєте кур’єра</div>
+            <div class="step-card__text">
+              і відправляєте свої документ або посилки. Насолоджуєтесь швидкою
+              доставкою.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section feedback">
+      <div class="container flex flex_center flex_middle">
+        <div class="feedback__img">
+          <img src="dist/img/feedback.png" alt="" />
+        </div>
+        <div class="feedback__form">
+          <div class="feedback__title">Виникли запитання?</div>
+          <div class="feedback__subtitle">Звертайтеся до професіоналів</div>
+          <div class="feedback__info">
+            Залиште свої дані і ми зв'яжемося з вами
+          </div>
+          <form action="" class="form">
+            <div class="form__line">
+              <input
+                class="form__input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Ваше ім’я"
+              />
+            </div>
+            <div class="form__line">
+              <input
+                class="form__input"
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Ваш телефон"
+              />
+            </div>
+            <div class="form__line">
+              <textarea
+                class="form__textarea"
+                name="message"
+                id="message"
+                cols="30"
+                rows="2"
+                placeholder="Ваше запитання"
+              ></textarea>
+            </div>
+            <div class="form__line">
+              <button class="form__submit btn btn_yellow" type="submit">
+                Надіслати
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container flex flex_between footer__wrapper">
+        <div class="footer__col">
+          <a href="/" class="footer__logo">
+            <img src="dist/img/logo.svg" alt="" />
+          </a>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__menu menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Кур'єрські послуги</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Авіаперевезення</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Експрес-доставка</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Міжнародна доставка</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Про компанію</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__menu menu__list">
+            <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакти</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Особистий кабiнет</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Інструкція по ос.кабiнету</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Політика конфіденційності</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__contacts contacts__list">
+            <li class="contacts__item address">
+              <i class="_icon _icon-maps contacts__icon"></i>
+              м. Київ, пров. Руслана Лужевського 14в, корпус 3
+            </li>
+            <li class="contacts__item phones">
+              <i class="_icon _icon-phone contacts__icon"></i>
+              <ul>
+                <li><a href="tel:+(050)477-05-05">(050)477-05-05</a></li>
+                <li><a href="tel:+(067)622-10-23">(067)622-10-23</a></li>
+                <li><a href="tel:+(044)501-15-61">(044)501-15-61</a></li>
+              </ul>
+            </li>
+            <li class="contacts__item work-time">
+              <i class="_icon _icon-clock contacts__icon"></i>Пн-Нд 08:00-18:00
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="modal" id="modal-courier">
+      <div class="modal__body">
+        <button class="modal__close _icon _icon-close"></button>
+        <h2 class="modal__title">Отримати знижку</h2>
+        <div class="modal__content">
+          <form class="form">
+            <div class="form__line">
+              <input type="text" class="form__input" placeholder="Ваше ім’я" />
+            </div>
+            <div class="form__line">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Ваш телефон"
+              />
+            </div>
+            <div class="form__line">
+              <lavel class="form__checkbox_label flex flex_top" for="agree">
+                <input
+                  type="checkbox"
+                  name="agree"
+                  id="agree"
+                  class="form__checkbox"
+                  checked="true"
+                />
+                <span
+                  >погоджуюсь з використанням особистих даних
+                  <a href="#" class="text_yellow text_underline"
+                    >та прочитав(ла) політику конфеденціальності</a
+                  ></span
+                >
+              </lavel>
+            </div>
+            <div class="form__line">
+              <button type="submit" class="btn btn_yellow full-width">
+                Надіслати
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer"></div>
+      </div>
+    </div>
+    <script src="dist/js/app.min.js"></script>
+  </body>
+</html>

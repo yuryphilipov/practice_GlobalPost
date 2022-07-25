@@ -1,0 +1,54 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px 30px;
+  opacity: 0;
+  transition: opacity 0.15s linear;
+  &.open {
+    opacity: 1;
+    & > .modal__body {
+      opacity: 1;
+    }
+  }
+
+  &__body {
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+    box-sizing: content-box;
+    background: var(--white);
+    margin: 0 auto;
+    padding: 65px 80px 55px;
+    border-radius: 48px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+
+  &__close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background: transparent;
+    border: none;
+    color: var(--yellow-1);
+  }
+
+  &__title {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--yellow-1);
+  }
+
+  &__content {
+  }
+
+  &__footer {
+  }
+}

@@ -1,0 +1,196 @@
+@import 'normalize';
+@import 'fonts';
+@import 'media-mixin';
+@import 'header';
+@import 'common';
+@import 'content';
+@import 'footer';
+@import 'modal';
+
+/* Fonts */
+/* &display=swap */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,500,600,700,800,900&display=swap');
+
+:root {
+  --main-bg-color: white;
+  --yellow-1: #ffbe2e;
+  --yellow-2: #ffeecc;
+  --yellow-3: #fff8e9;
+  --white: #ffffff;
+  --black: #3e3b3b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  &[role='button'] {
+    cursor: pointer;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 30px 0;
+}
+
+.arrow {
+  display: inline-block;
+  &_down {
+    transform: rotate(90deg);
+  }
+}
+
+.tab {
+  display: flex;
+  &__item {
+    flex: auto 1 1;
+  }
+  &__link {
+    display: block;
+    padding: 27px 0;
+    font-size: 1.5em;
+    text-align: center;
+    background: var(--yellow-2);
+    border-radius: 40px 40px 0px 0px;
+    &_active {
+      font-weight: 700;
+      background: var(--white);
+    }
+  }
+  &__content {
+    padding: 50px;
+    background: var(--white);
+    border-radius: 0px 0px 40px 40px;
+  }
+}
+
+/* calc form */
+.form-calc {
+  position: relative;
+  gap: 35px;
+  &__col {
+    flex-basis: 32%;
+  }
+  &__label {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+}
+
+.select {
+  width: 100%;
+  border: 1px solid var(--yellow-1);
+  border-radius: 40px;
+  padding: 30px;
+  background-color: var(--yellow-2);
+  font-size: 0.9em;
+  margin-top: 20px;
+  cursor: pointer;
+  &__value {
+    &[data-selected='true'] {
+      font-weight: 600;
+    }
+  }
+  &__options {
+    position: absolute;
+    top: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--yellow-1);
+    border-top: none;
+    border-radius: 0 0 40px 40px;
+    padding-bottom: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+  &.open {
+    border-bottom: none;
+    border-radius: 40px 40px 0 0;
+    background-color: var(--white);
+    .select__options {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__option {
+    display: block;
+    padding: 10px 30px;
+    &:hover {
+      background: var(--yellow-2);
+    }
+    &.selected {
+      font-weight: 600;
+    }
+  }
+}
+#form-calc-type {
+  .options {
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--yellow-1);
+    border-radius: 40px 0 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 50px 40px;
+  }
+  .option {
+    flex: auto 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background: var(--yellow-2);
+    border-radius: 40px;
+    &__info {
+    }
+    &__title {
+      font-size: 1.25em;
+      font-weight: 700;
+    }
+    &__subtitle {
+      font-size: 0.9em;
+      font-weight: 400;
+    }
+    &__image {
+    }
+  }
+}
+.select_full-width {
+  &.open {
+    background-color: var(--yellow-1);
+    border-bottom: 22px solid;
+    border-bottom-color: var(--yellow-1);
+  }
+}

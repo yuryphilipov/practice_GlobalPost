@@ -1,0 +1,235 @@
+/* Section Clients */
+.clients {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 34px;
+  }
+
+  &__item {
+  }
+}
+.client-card {
+  height: 154px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--yellow-1);
+}
+
+/* Section Partners */
+.partners {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+  }
+}
+.partner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 198px;
+  width: auto;
+  background: #ffffff;
+  box-shadow: 0px 2px 13px rgba(255, 190, 46, 0.2);
+  border-radius: 48px;
+}
+
+/* Section Services */
+.services {
+  background: var(--yellow-3);
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+  }
+}
+
+.service {
+  background: var(--yellow-2);
+  border: 1px solid var(--yellow-1);
+  border-radius: 32.5px;
+  padding: 15px 28px;
+  font-size: 1.75em;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-right: 14px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  &__content {
+  }
+
+  &__info {
+    font-size: 1.25em;
+    line-height: 1.2;
+  }
+
+  &__img {
+  }
+  &__btn {
+    font-size: 1.25em;
+    font-weight: 700;
+  }
+  &.active {
+    background: var(--black);
+    color: var(--yellow-1);
+  }
+}
+
+/* Slider */
+.slider {
+  min-height: 445px;
+  transition: transform 0.5s;
+  &__wrapper {
+    overflow: hidden;
+  }
+  &__item {
+    max-width: 1379px;
+    padding: 0 15px;
+    float: left;
+  }
+}
+
+/* Section Profits */
+.profits {
+}
+
+.profit {
+  &__list {
+    gap: 30px;
+  }
+
+  &__item {
+    flex-basis: 33.33%;
+    min-height: 100%;
+  }
+}
+.profit-card {
+  padding: 14px 24px 60px;
+  background: var(--white);
+  border-radius: 48px;
+  box-shadow: 0px 2px 13px rgba(255, 190, 46, 0.2);
+  display: flex;
+  flex-direction: column;
+  &__img {
+  }
+
+  &__title {
+    font-size: 1.75em;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+  }
+}
+
+/* Section Deadlines */
+.deadlines {
+  &__wrapper {
+    background: var(--yellow-3);
+    border-radius: 48px;
+    padding: 26px 162px 46px;
+  }
+
+  &__info {
+    font-size: 1.25em;
+    font-weight: 800;
+    & ul {
+      list-style: none;
+      & li {
+        &::before {
+          content: '\2022';
+          color: var(--yellow-1);
+          font-weight: 800;
+          display: inline-block;
+          width: 1em;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2.25em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 26px;
+  }
+
+  &__img {
+  }
+}
+
+/* Section Steps */
+
+.steps {
+  &__list {
+    min-height: 325px;
+    gap: 144px;
+  }
+
+  &__item {
+    flex-basis: 33.33%;
+    &:nth-child(2) {
+      align-self: flex-end;
+    }
+  }
+}
+
+.step-card {
+  &__title {
+    font-size: 3em;
+    font-weight: 900;
+    color: var(--yellow-1);
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 1.75em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__text {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+/* Section Feedback */
+.feedback {
+  background: var(--yellow-3);
+  &__img {
+    margin-right: 100px;
+  }
+  &__title {
+    font-size: 1.75em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+  }
+  &__form {
+  }
+}
